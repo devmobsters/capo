@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  ### Images that only build but not ran:
+  capo-php:
+    build:
+      context: php
+      args:
+        USER_ID: 501
+    image: fxgp/php
+    container_name: capophp
+    tty: true
+    volumes:
+        - ".:/capo"
